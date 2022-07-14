@@ -8,17 +8,25 @@
             del títiulo en la página web, a menor número, más importante 
             es este (Es decir, titulo -> h1 , sub-titulo h2, etc.) -->
             <!-- TODO: Add link to cat photos --> <!-- Ejemplo de comentario -->
-            <p>Click here to view more cat photos</p>
+            <p>Click here to view more <a href="https://freecatphotoapp.com" target="_blank">Cat photos</a></p>
             <!-- La etiqueta <p> es utilizada para crear parrafos de texto-->
+            <!-- El elemento ancla <a> sirve para poder vincular a otra página, el texto entre 
+            las etiquetas de <a> representa el texto que se visualizará en la página, el cual 
+            contendrá el enlace en cuestión -->
+            <!-- El atributo target indica donde abrir el enlace en cuestión,
+            por defecto este se abre en la misma pestaña en la que se clicko (target="_self"),
+            target="_blank", por su parte, indica que la página se abrirá en una ventana nueva -->
             <!-- TODO: Add link to cat photos --> <!-- Ejemplo de comentario -->
             <img src="images/foto.jpg"> 
             <!-- TODO: Añadir foto y carpeta para fotos-->
-            <img src="https://i.blogs.es/01806a/como-fotografiar-mascotas-i-perros-1/450_1000.webp" 
-            alt="A cute orange cat lying on its back"> 
+            <a href="https://freecatphotoapp.com"><img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" 
+            alt="A cute orange cat lying on its back"></a> 
             <!-- Se puede tambien añadir la url de una foto como ruta de referencia, no tiene por que 
             estar almacenanada localmente-->
             <!-- Todos los elementos img 'deben' tener un atributo alt,
             el texto de este atributo se muestra si la imagen en cuestión no carga-->
+            <!-- Si deseamos también convertir la imagen en un enlace, debemos añadir la etiqueta <a> al
+            principio y al final de la etiqueta <img>-->
         </main>
     </body>
 </html>

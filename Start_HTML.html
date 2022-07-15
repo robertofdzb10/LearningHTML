@@ -3,30 +3,83 @@
         <h1>CatPhotoApp</h1> 
         <!-- Todas las etiquetas empiezan <> y acaban </> -->
         <main> <!-- Representa el contenido principal del <body> de la web-->
-            <h2>Cat Photos</h2>
-            <!-- Solo puede haber un h1, el número indica la relevancia 
-            del títiulo en la página web, a menor número, más importante 
-            es este (Es decir, titulo -> h1 , sub-titulo h2, etc.) -->
-            <!-- TODO: Add link to cat photos --> <!-- Ejemplo de comentario -->
-            <p>Click here to view more <a href="https://freecatphotoapp.com" target="_blank">Cat photos</a></p>
-            <!-- La etiqueta <p> es utilizada para crear parrafos de texto-->
-            <!-- El elemento ancla <a> sirve para poder vincular a otra página, el texto entre 
-            las etiquetas de <a> representa el texto que se visualizará en la página, el cual 
-            contendrá el enlace en cuestión -->
-            <!-- El atributo target indica donde abrir el enlace en cuestión,
-            por defecto este se abre en la misma pestaña en la que se clicko (target="_self"),
-            target="_blank", por su parte, indica que la página se abrirá en una ventana nueva -->
-            <!-- TODO: Add link to cat photos --> <!-- Ejemplo de comentario -->
-            <img src="images/foto.jpg"> 
-            <!-- TODO: Añadir foto y carpeta para fotos-->
-            <a href="https://freecatphotoapp.com"><img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" 
-            alt="A cute orange cat lying on its back"></a> 
-            <!-- Se puede tambien añadir la url de una foto como ruta de referencia, no tiene por que 
-            estar almacenanada localmente-->
-            <!-- Todos los elementos img 'deben' tener un atributo alt,
-            el texto de este atributo se muestra si la imagen en cuestión no carga-->
-            <!-- Si deseamos también convertir la imagen en un enlace, debemos añadir la etiqueta <a> al
-            principio y al final de la etiqueta <img>-->
+            <section>
+                <h2>Cat Photos</h2>
+                <!-- Solo puede haber un h1, el número indica la relevancia 
+                del títiulo en la página web, a menor número, más importante 
+                es este (Es decir, titulo -> h1 , sub-titulo h2, etc.) -->
+                <!-- TODO: Add link to cat photos --> <!-- Ejemplo de comentario -->
+                <p>Click here to view more <a href="https://freecatphotoapp.com" target="_blank">Cat photos</a></p>
+                <!-- La etiqueta <p> es utilizada para crear parrafos de texto-->
+                <!-- El elemento ancla <a> sirve para poder vincular a otra página, el texto entre 
+                las etiquetas de <a> representa el texto que se visualizará en la página, el cual 
+                contendrá el enlace en cuestión -->
+                <!-- El atributo target indica donde abrir el enlace en cuestión,
+                por defecto este se abre en la misma pestaña en la que se clicko (target="_self"),
+                target="_blank", por su parte, indica que la página se abrirá en una ventana nueva -->
+                <!-- TODO: Add link to cat photos --> <!-- Ejemplo de comentario -->
+                <!--img src="images/foto.jpg" !!!!!!!!!!!!!!--> 
+                <!-- TODO: Añadir foto y carpeta para fotos-->
+                <a href="https://freecatphotoapp.com"><img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" 
+                alt="A cute orange cat lying on its back"></a> 
+                <!-- Se puede tambien añadir la url de una foto como ruta de referencia, no tiene por que 
+                estar almacenanada localmente-->
+                <!-- Todos los elementos img 'deben' tener un atributo alt,
+                el texto de este atributo se muestra si la imagen en cuestión no carga-->
+                <!-- Si deseamos también convertir la imagen en un enlace, debemos añadir la etiqueta <a> al
+                principio y al final de la etiqueta <img>-->
+            </section>
+                <!-- La etiqueta <section> tiene una función semántica, para expresar contenidos divididos en 
+                "secciones" o bloques-->
+            <section>
+                <h2>Cat Lists</h2>
+                <!-- Al añadir una cabezera con un rango inferior, se da a entender que se tratará de una 
+                subsección (hemos de entender las secciones como apartados de un índice, con sus puntos y subpuntos)-->
+                <h3>Things cats love:</h3>
+                <ul>
+                    <li>cat nip</li>
+                    <li>laser pointers</li>
+                    <li>lasagna</li>
+                    <!-- La etiqueta <li> declara cada uno de los elementos de una lista (item list)-->
+                </ul>
+                <figure>
+                    <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg" 
+                    lt="A slice of lasagna on a plate">
+                    <!-- La etiqueta <ul> hace referencia a una lista no ordenada (unordened list)-->
+                    <figcaption>Cats <em>love</em> lasagna.</figcaption>
+                    <!-- La eiqueta <em> sirve para indicar enfasis-->
+                    <!-- La etiqueta <figcaption> es un elemento de título de figura, utilizada para agregar 
+                    un título para describir la imagen dentro de las etiquetas de <figure>-->
+                </figure>
+                <!-- El elemento figure indica  un contenido independiente, aun estando dentro del main,
+                de manera que si este se elimina, no le afecta al main, sirve para asociar una foto con un  pie de iamgen-->
+                <h3>Top 3 things cats hate:</h3>
+                <ol>
+                    <li>flea treatment</li>
+                    <li>thunder</li>
+                    <li>other cats</li>
+                </ol>
+                <!-- La etiqueta <ol> represneta una lista ordenada (ordered list), funcionanado igual que las <ul>, con la 
+                diferencia de que estas están numeradas, empezando por el uno-->
+                <figure>
+                   <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg" alt="Five cats looking around a field."> 
+                   <figcaption>Cats <strong>hate</strong> other cats</figcaption>
+                   <!-- La etiqueta <strong> se utliza para indicar que el texto que esta contiene es 
+                    de gran importancia o urgente-->
+                </figure>
+            </section>
+            <section>
+                <h2>Cat form</h2>
+                <!-- Al añadir una cabezera con un rango inferior a la primera sección, se da a entender que se tratará de una 
+                subsección, pero al tener el mismo rango que la segunda sección, se indica que ambas subsecciones estan a la 
+                misma altura-->
+                <form action="https://freecatphotoapp.com/submit-cat-photo">   
+                </form>
+                <!-- La etiqueta <form> representa una zona de la página web interactiva para el usario, permitiendole enviar
+                información a un servidor web, para que posteriormente el desarrollador pueda acceder a ella -->
+                <!-- El atributo action="" indica donde devería ser mandada la información obtenida mediante el área 
+                interactica contenida en la etiqueta <form>-->
+            </section>
         </main>
     </body>
 </html>

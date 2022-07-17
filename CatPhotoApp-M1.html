@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<!-- Ha de ser siempre la primera línea de código (Declaración del tipo de documento), indica en que versión
+de HTML estamos trabajando, de manera que el navegador pueda saberlo-->
+<html lang="en">
+<!-- El atributo lang (language) indica el idioma en el cual estará escrita la página, siendo en, english-->
+    <head>
+        <meta charset="UTF-8">
+        <!-- La etiqueta <meta> de metainformación, sirve para aportar información sobre el documetno-->
+        <!-- Es importante que la etiqueta <meta> sea la primera línea del head, para que el navegador conozca la 
+        codificación de caracteres utilizada antes de procesar nada, la cual se indica por el atributo charset-->
+        <title>CatPhotoApp</title>
+        <!-- El texto introducido entre la etiqueta <title> determina el nombre que recivirá la página en la pestaña-->
+    </head>
+    <body>
+        <h1>CatPhotoApp</h1> 
+        <!-- Todas las etiquetas empiezan <> y acaban </> -->
+        <main> <!-- Representa el contenido principal del <body> de la web-->
+            <section>
+                <h2>Cat Photos</h2>
+                <!-- Solo puede haber un h1, el número indica la relevancia 
+                del títiulo en la página web, a menor número, más importante 
+                es este (Es decir, titulo -> h1 , sub-titulo h2, etc.) -->
+                <!-- TODO: Add link to cat photos --> <!-- Ejemplo de comentario -->
+                <p>Click here to view more <a href="https://freecatphotoapp.com" target="_blank">Cat photos</a></p>
+                <!-- La etiqueta <p> es utilizada para crear parrafos de texto-->
+                <!-- El elemento ancla <a> sirve para poder vincular a otra página, el texto entre 
+                las etiquetas de <a> representa el texto que se visualizará en la página, el cual 
+                contendrá el enlace en cuestión -->
+                <!-- El atributo target indica donde abrir el enlace en cuestión,
+                por defecto este se abre en la misma pestaña en la que se clicko (target="_self"),
+                target="_blank", por su parte, indica que la página se abrirá en una ventana nueva -->
+                <!-- TODO: Add link to cat photos --> <!-- Ejemplo de comentario -->
+                <img src="images/foto.jpg"> 
+                <!-- TODO: Añadir foto y carpeta para fotos-->
+                <a href="https://freecatphotoapp.com"><img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" 
+                alt="A cute orange cat lying on its back"></a> 
+                <!-- Se puede tambien añadir la url de una foto como ruta de referencia, no tiene por que 
+                estar almacenanada localmente-->
+                <!-- Todos los elementos img 'deben' tener un atributo alt,
+                el texto de este atributo se muestra si la imagen en cuestión no carga-->
+                <!-- Si deseamos también convertir la imagen en un enlace, debemos añadir la etiqueta <a> al
+                principio y al final de la etiqueta <img>-->
+            </section>
+                <!-- La etiqueta <section> tiene una función semántica, para expresar contenidos divididos en 
+                "secciones" o bloques-->
+            <section>
+                <h2>Cat Lists</h2>
+                <!-- Al añadir una cabezera con un rango inferior, se da a entender que se tratará de una 
+                subsección (hemos de entender las secciones como apartados de un índice, con sus puntos y subpuntos)-->
+                <h3>Things cats love:</h3>
+                <ul>
+                    <li>cat nip</li>
+                    <li>laser pointers</li>
+                    <li>lasagna</li>
+                    <!-- La etiqueta <li> declara cada uno de los elementos de una lista (item list)-->
+                </ul>
+                <figure>
+                    <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg" 
+                    lt="A slice of lasagna on a plate">
+                    <!-- La etiqueta <ul> hace referencia a una lista no ordenada (unordened list)-->
+                    <figcaption>Cats <em>love</em> lasagna.</figcaption>
+                    <!-- La eiqueta <em> sirve para indicar enfasis-->
+                    <!-- La etiqueta <figcaption> es un elemento de título de figura, utilizada para agregar 
+                    un título para describir la imagen dentro de las etiquetas de <figure>-->
+                </figure>
+                <!-- El elemento figure indica  un contenido independiente, aun estando dentro del main,
+                de manera que si este se elimina, no le afecta al main, sirve para asociar una foto con un  pie de iamgen-->
+                <h3>Top 3 things cats hate:</h3>
+                <ol>
+                    <li>flea treatment</li>
+                    <li>thunder</li>
+                    <li>other cats</li>
+                </ol>
+                <!-- La etiqueta <ol> represneta una lista ordenada (ordered list), funcionanado igual que las <ul>, con la 
+                diferencia de que estas están numeradas, empezando por el uno-->
+                <figure>
+                   <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg" alt="Five cats looking around a field."> 
+                   <figcaption>Cats <strong>hate</strong> other cats</figcaption>
+                   <!-- La etiqueta <strong> se utliza para indicar que el texto que esta contiene es 
+                    de gran importancia o urgente-->
+                </figure>
+            </section>
+            <section>
+                <h2>Cat form</h2>
+                <!-- Al añadir una cabezera con un rango inferior a la primera sección, se da a entender que se tratará de una 
+                subsección, pero al tener el mismo rango que la segunda sección, se indica que ambas subsecciones estan a la 
+                misma altura-->
+                <form action="https://freecatphotoapp.com/submit-cat-photo">
+                    <fieldset>
+                        <legend>Is your cat an indoor or outdoor cat?</legend>
+                        <!-- La etiqueta <legend> sirve para crear un título para los elementos de la etiqueta <fieldset> 
+                        (la cual agrupa campos en un bloque), creandolo en la parte superior del bloque-->
+                        <label><input type="radio" id="indoor" name="indoor-outdoor" value="indoor" checked> Indoor </label>
+                        <!-- Dandole el valor radio al atributo type creamos un botón redondo de seleción, el cual 
+                        tendra a su izquierda o a su derecha el texto que pongamos anates o después del botón -->
+                        <!-- La etiqueta <label> en este caso sirve para que al hacer click en el texto que acompaña al radio
+                        button, también se selecione el botón-->
+                        <!-- El atributo id representa un identificador, no se puuede tener más de un elemento con el mismo id
+                        en una misma página -->
+                        <!-- Cuando un elemento tiene múltiples atributos, el orden de estos no importa-->
+                        <!-- El atributo checked marca por defecto la casilla en cuestión-->
+                        <label><input type="radio" id="outdoor" name="indoor-outdoor" value="outdoor"> Outdoor </label>
+                        <!-- El atirbuto name sirve para asginar un nombre al botón, no obstante al tener ambos botones el mismo
+                        nombre solo uno de los dos puede estar activo-->
+                        <!-- Cuando el usario envia el formulario los datos del botón se basan en los atributos de nombre y valor,
+                        de ahí que se haya introducido el campo del valor, para poder distinguir entre ambos botones, ya que
+                        comparten nombre -->
+                    </fieldset>  
+                    <!-- La etiqueta <fieldset> sirve para agrupar campos en un bloque-->
+                    <fieldset>
+                        <legend>What's your cat's personality?</legend>
+                        <input type="checkbox" id="loving" name="personality" value="loving" checked><label for="loving">Loving</label>
+                        <!-- El valor "checkbox" del atributo type, como su nombre indica crea una casilla de verificación -->
+                        <!-- Otra manera de asociar un input con el texto que le acompaña es introduciendo ese texto entre
+                        etiquetas <label> e incluir el atributo for con el valor del id del input en cuestión -->
+                        <input type="checkbox" id="lazy" name="personality" value="lazy"><label for="lazy">Lazy</label>
+                        <input type="checkbox" id="energetic" name="personality" value="energetic"><label for="energetic">Energetic</label>
+                        <!-- El campo value, aunque no obligatorio, si es muy recomendable en los checkbox y en los radio buttons-->
+                    </fieldset>
+                    <input type="text" name="catphotourl" placeholder="cat photo URL" required>
+                    <!-- La etiqueta <input> representa diferentes tipos de elementos de entrada, hemos de indicar el tipo
+                    mediante el atributo type-->
+                    <!-- El atributo name indica el nombre de la variable que contendra el texto introducido por el usaurio,
+                    en este caso texto, almacenado localmente en el lugar que hallamos indicado mediante el atributo action -->
+                    <!-- El atributo placeholder le indica al usuario que tipo de información ha de introducir en el input,
+                    apareciedno el texto de este dentro del cuadrado de input en un color gris claro, desapareciendo cuando
+                    empieze a escribir en el cuadrado-->
+                    <!-- El atributo required indica que el campo input en cuestión  ha de ser rellenado para poder avanzar-->
+                    <button type="submit"> Submit </button>
+                    <!-- La etiqueta <button> crea un botón con el texto que se le haya introducido entre medias,
+                    por defecto un botón perteneciante a <form> envía la información rellenada por el usario a la ubicación
+                    indicada en el atributo action de la etiqueta <form> -->
+                    <!-- El atributo type con el valor submit tiene la misma función que el botón dentro de una etiqueta
+                    <form> explicada en el anterior comentario  -->
+                </form>
+                <!-- La etiqueta <form> representa una zona de la página web interactiva para el usario, permitiendole enviar
+                información a un servidor web, para que posteriormente el desarrollador pueda acceder a ella -->
+                <!-- El atributo action="" indica donde devería ser mandada la información obtenida mediante el área 
+                interactica contenida en la etiqueta <form>-->
+            </section>
+        </main>
+        <footer>
+            <p>No Copyright - <a href="https://www.freecodecamp.org">freeCodeCamp.org</a></p>
+        </footer>
+        <!-- El footer representa el pie de página, contiene generalmente información del autor, derechos de autor, etc. -->
+    </body>
+</html>

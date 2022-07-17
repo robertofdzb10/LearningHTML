@@ -73,13 +73,46 @@
                 <!-- Al añadir una cabezera con un rango inferior a la primera sección, se da a entender que se tratará de una 
                 subsección, pero al tener el mismo rango que la segunda sección, se indica que ambas subsecciones estan a la 
                 misma altura-->
-                <form action="https://freecatphotoapp.com/submit-cat-photo">   
-                    <input type="text" name="catphotourl" placeholder="cat photo URL">
-                    <!-- TODO: 39-->
+                <form action="https://freecatphotoapp.com/submit-cat-photo">
+                    <fieldset>
+                        <legend>Is your cat an indoor or outdoor cat?</legend>
+                        <!-- La etiqueta <legend> sirve para crear un título para los elementos de la etiqueta <fieldset> 
+                        (la cual agrupa campos en un bloque), creandolo en la parte superior del bloque-->
+                        <label><input type="radio" id="indoor" name="indoor-outdoor" value="indoor"> Indoor </label>
+                        <!-- Dandole el valor radio al atributo type creamos un botón redondo de seleción, el cual 
+                        tendra a su izquierda o a su derecha el texto que pongamos anates o después del botón -->
+                        <!-- La etiqueta <label> en este caso sirve para que al hacer click en el texto que acompaña al radio
+                        button, también se selecione el botón-->
+                        <!-- El atributo id representa un identificador, no se puuede tener más de un elemento con el mismo id
+                        en una misma página -->
+                        <!-- Cuando un elemento tiene múltiples atributos, el orden de estos no importa-->
+                        <label><input type="radio" id="outdoor" name="indoor-outdoor" value="outdoor"> Outdoor </label>
+                        <!-- El atirbuto name sirve para asginar un nombre al botón, no obstante al tener ambos botones el mismo
+                        nombre solo uno de los dos puede estar activo-->
+                        <!-- Cuando el usario envia el formulario los datos del botón se basan en los atributos de nombre y valor,
+                        de ahí que se haya introducido el campo del valor, para poder distinguir entre ambos botones, ya que
+                        comparten nombre -->
+                    </fieldset>  
+                    <!-- La etiqueta <fieldset> sirve para agrupar campos en un bloque-->
+                    <fieldset>
+                        <legend>What's your cat's personality?</legend>
+                        <input type="checkbox" id="loving"> Loving
+                    </fieldset>
+                    <input type="text" name="catphotourl" placeholder="cat photo URL" required>
                     <!-- La etiqueta <input> representa diferentes tipos de elementos de entrada, hemos de indicar el tipo
                     mediante el atributo type-->
                     <!-- El atributo name indica el nombre de la variable que contendra el texto introducido por el usaurio,
                     en este caso texto, almacenado localmente en el lugar que hallamos indicado mediante el atributo action -->
+                    <!-- El atributo placeholder le indica al usuario que tipo de información ha de introducir en el input,
+                    apareciedno el texto de este dentro del cuadrado de input en un color gris claro, desapareciendo cuando
+                    empieze a escribir en el cuadrado-->
+                    <!-- El atributo required indica que el campo input en cuestión  ha de ser rellenado para poder avanzar-->
+                    <button type="submit"> Submit </button>
+                    <!-- La etiqueta <button> crea un botón con el texto que se le haya introducido entre medias,
+                    por defecto un botón perteneciante a <form> envía la información rellenada por el usario a la ubicación
+                    indicada en el atributo action de la etiqueta <form> -->
+                    <!-- El atributo type con el valor submit tiene la misma función que el botón dentro de una etiqueta
+                    <form> explicada en el anterior comentario  -->
                 </form>
                 <!-- La etiqueta <form> representa una zona de la página web interactiva para el usario, permitiendole enviar
                 información a un servidor web, para que posteriormente el desarrollador pueda acceder a ella -->

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <!-- Primera manera, escribiendo CSS directamente en el html-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Código con el objetivo de que la página web se vea de manera similar en dispositivos móviles como en pcs-->
+        <!-- El atributo name indica el nombre al que se asocia la metainformación (por ejemplo name="Author" y
+        content="Roberto Fernández")-->
+        <!-- El atributo content indica el valor correspondiente al atributo que hace referencia el campo name
+        (en el caso de atributo author el valor es Roberto Fernández)-->
+        <style>
+          h1,h2,p{
+            text-align: center;
+          }  
+        </style>
+        <!-- La etiqueta <style> se utliza para añadir estilos a un elemento, como color, fuente, tamaño, etc.-->
+        <!-- El eleemnto en cuestión (en este caso h1) ha de escribirse dentro de las etiquetas <style>, seguido de dos 
+        llaves, dentro de las cuales se indicarán los estilos a añadir, con la siguiente sintaxis, "propiedad:valor;"
+        (en este caso se deseaba centrar, center, el elemento h1, text-align )-->
+        <!-- Se pueden encadenar varios elementos (h1,h2,p) a la hora de añadir estilos a un elemento, 
+        en el caso de que deseemos aplicar los mismos estilos a todos esos elementos-->
+        <link rel="stylesheet" href="CafeMenu-styles-M2.css">
+        <!-- La etiqueta <link> permite referenciar a otro docuemnto, pudiendo este ser otra web 
+        o un archivo css, por ejemplo-->
+        <!-- El atributo rel indica la relación existente entre el documento enlazado y el actual, se suele usar para
+        enlazar una hoja de estilos, adoptando este el valor de "stylesheet"-->
+        <!-- El atributo href="" especifica la url del recurso enlazado, teniendo que ser esta absoluta-->
+        <title>Cafe Menu</title>
+    </head>
+    <body>
+        <header>
+            <h1>CAMPER CAFE</h1>
+            <p>Est. 2020</p>
+        </header>
+        <!-- La etiqueta <header> representa un contenedor para contenido introductorio, 
+        o un conjunto de enlaces de navegación-->
+        <main>
+           <section>
+                <h2>Coffee</h2>
+           </section> 
+        </main>
+    </body>
+</html>

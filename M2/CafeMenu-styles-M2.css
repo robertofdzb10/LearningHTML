@@ -1,5 +1,23 @@
-h1{
-    font-style: italic;
+body{
+    /* background-color: burlywood; */
+    background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
 }
+/* El atributo background-image permite poner imagenes en el fondo del elemento selecionado,
+pudiendo introducir imagenes de una url concreta escrbiendo url() y dentro de los parentesis
+la dirección de la imagen en cuestión */
+/* El atributo background-color cambia el color de fondo del elemento selecionado,
+escogiendo como nuevo color aquel que le indiquemos */ 
 /* El atributo font-style permite definir el aspecto de la letra, pudiendo ponerla, por 
 ejemplo, en cursiva o italic */
+.menu{
+/* Al principio era div{} */
+/* .menu es el nombre de una clase llamada menu, asignada al div */
+    width: 80%;
+    background-color: burlywood;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* El atributo width indica el ancho del elemento selecionado, podemos indicarlo en pixels
+o en porcentaje, siento el X% de su elemento padre (En nuestro caso el padre de div es el body) */
+/* Al introducir los valores por defecto de los márgenes, estamos centrando el elemento div dentro de
+su elemento padre */

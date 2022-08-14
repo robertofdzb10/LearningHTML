@@ -29,42 +29,70 @@
         <title>Cafe Menu</title>
     </head>
     <body>
-      <div class="Menu">
+      <div class="menu">
         <!-- <div> sirve para crear secciones o agrupar contenidos, utilizado principalmente con fines de diseño 
         (Ej. centrar bloques)-->
-        <!-- El atributo class sirve para asignar nombres de clases al div (Clases para CSS)-->
+        <!-- El atributo class sirve para asignar nombres de clases al elemento que contiene ese atributo (Clases para CSS)-->
         <header>
             <h1>CAMPER CAFE</h1>
-            <p>Est. 2020</p>
+            <p class="established">Est. 2020</p>
         </header>
         <!-- La etiqueta <header> representa un contenedor para contenido introductorio, 
         o un conjunto de enlaces de navegación-->
+        <hr>
+        <!-- Se utiliza para representar un cambio de párrafo, mediante una línea horizontal
+        configurable mediante CSS-->
         <main>
            <section>
                 <h2>Coffee</h2>
-                <article>
-                  <p> French Vanilla</p>
-                  <p> 3.00</p>
+                <img src="https://cdn.freecodecamp.org/curriculum/css-cafe/coffee.jpg" alt="coffee icon">
+                <!-- Las etiquetas <img> son elemntos de línea, es decir que no ocupan un bloque,
+                pueden compartir con otros elementos el espacio-->
+                <article class="item">
+                  <p class="flavor"> French Vanilla</p><p class="price"> 3.00</p>
+                  <!-- Las etiquetas <p> ocupan el tamaño completo del contenedor en el cual
+                  se enceutran-->
                 </article>
-                <article>
-                  <p> Caramel Macchiato</p>
-                  <p> 3.75</p>
+                <article class="item">
+                  <p class="flavor"> Caramel Macchiato </p><p class="price"> 3.75 </p>
                 </article>
-                <article>
-                  <p> Pumpkin Spice</p>
-                  <p> 3.50</p>
+                <article class="item">
+                  <p class="flavor"> Pumpkin Spice </p><p class="price"> 3.50 </p>
                 </article>
-                <article>
-                  <p> Hazelnut</p>
-                  <p> 4.00</p>
+                <article class="item">
+                  <p class="flavor"> Hazelnut </p><p class="price"> 4.00 </p>
                 </article>
-                <article>
-                  <p> Mocha</p>
-                  <p> 4.50</p>
+                <article class="item">
+                  <p class="flavor"> Mocha </p><p class="price"> 4.50 </p>
                 </article>
                 <!-- TODO: Decir que es article-->
            </section> 
+           <section>
+              <h2> Desserts </h2>
+              <img src="https://cdn.freecodecamp.org/curriculum/css-cafe/pie.jpg" alt="pie icon">
+              <article class="item">
+                <p class="dessert"> Donut </p><p class="price"> 1.50 </p>
+                <!-- Al introducirlas todas en la misma línea conseguimos que la separación entre
+                ambas sea menor-->
+              </article>
+              <article class="item">
+                <p class="dessert"> Cherry Pie </p><p class="price"> 2.75 </p>
+              </article>
+              <article class="item">
+                <p class="dessert"> Cheesecake </p><p class="price"> 3.00 </p>
+              </article>
+              <article class="item">
+                <p class="dessert"> Cinnamon Roll </p><p class="price"> 2.50 </p>
+              </article>
+           </section>
         </main>
+        <hr class="bottom-line">
+        <footer>
+          <p><a href="https://www.freecodecamp.org">Visit our website</a></p>
+          <!-- El texto contenido dentro de la etiqueta <a> es el que tendrá el link en cuestión,
+          el de la etiqueta <p> simplemente aparecrá a su lado-->
+          <p class="address"> 123 Free Code Camp Drive </p>
+        </footer>
       </div>
     </body>
 </html>

@@ -1,6 +1,8 @@
 body{
     /* background-color: burlywood; */
     background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
+    font-family: sans-serif;
+    padding: 20px;
 }
 /* El atributo background-image permite poner imagenes en el fondo del elemento selecionado,
 pudiendo introducir imagenes de una url concreta escrbiendo url() y dentro de los parentesis
@@ -9,15 +11,128 @@ la dirección de la imagen en cuestión */
 escogiendo como nuevo color aquel que le indiquemos */ 
 /* El atributo font-style permite definir el aspecto de la letra, pudiendo ponerla, por 
 ejemplo, en cursiva o italic */
+/* El atributo "font-family" sirve para cambiar el tipo de letra de todo el documento, 
+siendo "sans-serif" un tipo */
 .menu{
 /* Al principio era div{} */
 /* .menu es el nombre de una clase llamada menu, asignada al div */
     width: 80%;
+    max-width: 500px;
     background-color: burlywood;
     margin-left: auto;
     margin-right: auto;
+    padding: 20px;
+    /* padding-left: 20px; */
+    /* padding-right: 20px; */
+    /* padding-top: 20px; */
+    /* padding-bottom: 20px; */
 }
 /* El atributo width indica el ancho del elemento selecionado, podemos indicarlo en pixels
 o en porcentaje, siento el X% de su elemento padre (En nuestro caso el padre de div es el body) */
 /* Al introducir los valores por defecto de los márgenes, estamos centrando el elemento div dentro de
 su elemento padre */
+/* El atributo "padding" indica la distancia, en este caso en pixels, desde el borde del elemento
+hasta la nueva ubicación del elemento en cuestión (Ej, en un texto, lo movemos a la izquierda dentro 
+de un bloque, el cual es el elemento, acortandolo) */
+/* El atributo padding hace referencia a los cuatro paddings, "left", "right", "top" y "bottom" */
+/* El max-width lo utilizamos ya que el width se basa en porcentajes. Así conseguimos que este 
+no exceda de un valor concreto */
+.flavor, .dessert{
+    text-align: left;
+    width: 75%;
+}
+/* Exceptuando el body hemos de comenzar las clases con un "." */
+/* Mediante el atributo text-align selecionamos la ubicación del contenido de la clase, siendo en este 
+caso "left" */
+/* Al poner dos clases seguidas, indicamos que la definción de ambas será la misma */
+.price{
+    text-align: right;
+    width: 25%;
+}
+/* Hemos de indicar el width porque las etiquetas <p> solo ocupan lo que su contenido ocupe, por lo que al 
+decir que han de estar todas las etiquetas en el mismo bloque hemos hecho que se centren a izquierda y derecha,
+pero dentro de su tamaño. */
+/* Mediante el atributo width aumentamos el tamaño del bloque, en este caso <p>, un 50% */
+.item p { 
+    display: inline-block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+/* La clase item pertenece a una etiqueta artíclo, por lo que al poner la letra "p" después de la clase,
+indicamos que el contenido de esta se aplique solo a las etiquetas <p> */
+/* La propiedad display nos sirve para indicar si el elemento al cual hace referencia se tratará como un 
+"block" o como "inline element" */
+/* El atributo de margen indica, en este caso en pixels, el margen que se dejará con respecto al siguiente
+elemento (bottom) o el anterior (top) */
+h1, h2{
+    font-family: Impact, serif;
+}
+/* Se pueden cambiar propiedades de etiquetas en concreto, en este caso no hace falta que vengan precedidas
+de un "." (".h1") */
+/* Al introducir dos valores al atributo "font-family" estamos indicando una fuente de reserva, para que en 
+caso de que la primera diera error se cargase la segunda */
+h1{
+    font-size: 40px;
+    margin: 0px;
+    margin-bottom: 15px;
+}
+h2{
+    font-size: 30px;
+}
+/* El atributo "font-size" indica el tamaño de la letra */
+.established{
+    font-style: italic;
+}
+/* El atributo "font-style" indica el tipo de letra (No confundir con la familia de la letra) (Ej. Cursiva) */
+hr{
+    height: 3px;
+    background-color: brown;
+    border-color: brown;
+    height: 2px;
+    /* Al principio la altura era 1px, pero al cambiar el color del borde paso a ser de 3px */
+}
+/* El valor predeterminado de altura para los bordes hr es 1px. Sin embargo, al cambiar el color del borde, 
+la altura total de la línea es de 5 px (3 px + el ancho del borde superior + el ancho del borde inferior, 
+ambos de 1 px), por eso hemos de configurarlo */
+.bottom-line{
+    margin-top: 25px;
+}
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -25px;
+}
+/* La propiedad block del atributo display hace que el elemento se comporte como un bloque, a lo que ubicación
+respecta */
+/* El valor auto del margen es calculado por el buscador en cuestión, siendo este el necesario para mandar al
+elemento al final del espacio disponible, pero de manera que entre entero */
+/* Los márgenes tambien pueden ser negativos */
+
+/*FOOTER*/
+footer{
+    font-size: 14px;
+}
+/* Al igual que las etiquetas, los elementos como footer o body no han de estar precedidos de un "." en css */
+a{
+    color: black;
+}
+/* Así nos aseguramos que independientemente de si se ha pulsado o no en el enlace el color de este será el mismo, negro.
+De lo contrario permanecería azul hasta que se hiciera click en el, a partid de entonces pasaría a ser púrpura */
+a:visited{
+    color: black;
+}
+/* El código "a:visited" se ejecuta cuando el link contenido en a es visitado, en este caso cambia el color del texto
+que contiene el enlace a gris */
+a:hover{
+    color: brown;
+}
+/* El código "a.hover" se ejecuta al pasar el ratón por encima del enlace */
+a:active{
+    color:brown;
+}
+/* El código "a.active" se ejecuta justo al hacer click con el ratón en el enlace */
+.address{
+    margin-bottom: 5px;
+}

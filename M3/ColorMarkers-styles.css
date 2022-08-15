@@ -1,0 +1,77 @@
+h1{
+    text-align: center;
+}
+.marker{
+    width: 200px;
+    height: 25px;
+    margin: 10px auto;
+}
+/* Le damos tamaño a nuestro div para que aparezca por pantalla de lo contrario estaría vacio y no se vería */
+/* Al hacer margin auto, estamos haciendo auto en los cuatro ejes, centrandolo */
+/* El primer valor que se le asocia al atributo "margin" va dirigido a los márgenes superiores e inferiores, 
+mientras que el segundo, al margen izquierdo y derecho */
+.red{
+    background: linear-gradient( 180deg, rgb(122, 74, 14) 0%, rgb(245, 62, 113) 50%, rgb(162, 27, 27) 100% );
+    box-shadow: 0px 0px 20px 0px rgba(83, 14, 14, 0.8);
+}
+/* La función linear-gradient crea una imagen, su sintaxis es la siguiente,
+"linear-gradient(gradientDirection, color1, color2, ...);", los colores pueden ser escritos con cualquiera de las
+formas que permite css. Deg representa los grados. */
+/* El porcetnaje indica el punto en el cual se transiciona de forma completa al próximo color */
+/* El atributo "box-shadow" permite añadir una sombra a los elementos, tiene la siguiente sintaxis, 
+"box-shadow: offsetX (despalzamiento en x de la sombra) offsetY (despalzamiento en y de la sombra) 
+blurRadius (Opcional - Difuminación del borde de la sombra, en px, por defecto 0)
+spreadRadius (Opcional - Tamaño extra de la sombra, en px, por defecto 0) color;" */
+/* Difuminación hace referencia al desenfoque mientras que opacidad al hecho de dejar pasar menos luz
+(ver más oscuro el color) */
+.green{
+    background: linear-gradient(#55680D, #71F53E,  #116C31);
+    box-shadow: 0px 0px 20px 0px #3B7E20CC;
+}
+/* También se pueden poner los colores en forma hexadecimal, precedidos por un "#", formados por seis números, 
+estando cada color representado mediante un par */
+/* Por defecto, los colores transicionan en los puntos, 0, 50 y 100 */
+/* Por defecto la dirección del gradiente es de 180deg */
+.blue{
+    background: linear-gradient( hsl(186, 76%, 16%), hsl(223, 90%, 60%), hsl(240, 56%, 42%));
+    box-shadow: 0px 0px 20px 0px hsla(223, 59%, 31%, 0.8);
+}    
+/* La función de color hsl acepta 3 valores: un número de 0 a 360 para el matiz, un porcentaje de 0 a 100 para la saturación 
+y un porcentaje de 0 a 100 para la ligereza. Si imaginas una rueda de color, el tono rojo está a 0 grados, el verde a 120 grados 
+y el azul a 240 grados. La saturación es la intensidad de un color del 0 %, o gris, al 100 % para el color puro. La ligereza es 
+lo brillante que aparece un color, del 0%, o completamente negro, al 100%, blanco completo, con un 50% siendo neutro. */
+/* Al igual que la clase "rgb" tiene una derivada llamada "rgba" para poder representar la opacidad del color, la clase "hsl"
+también tiene su derivada, en la cual incluye la opacidad o alpha, "hsla" */
+.container{
+    background-color: rgb(255,255,0255);
+    padding: 10px 0px;
+}
+/* Si en vez de escoger un color en concreto (rojo, azul, etc.) queremos uno "derivado", usamos la función rgb,
+rgb( rojo, verde, azul ) */
+/* El atributo padding se refiere a la distancia dentro del contendor y margin, tambien a la distancia, 
+pero con el resto de elementos */
+.sleeve{
+    width: 110px;
+    height: 25px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-left: 10px double rgba(0, 0, 0, 0.75);
+    /* border-left-width: 10px; */
+    /* border-left-style: solid; */
+    /* border-left-color: black; */
+    /* opacity: 0.5; */
+}
+/* Los posibles valores del atributo opacidad oscilan entre 0 y 1.0 */
+/* La función rgba() representa lo mismo que rgb, solo que reserva un campo, el último, para la alpha o opacidad, 
+este campo también oscila entre 0 y 1.0 */
+/* El valor "solid" del atributo "border-left-style" representa una línea gorda */
+/* El color predeterminado para el atributo "border-color-left" es negro */
+/* El atributo "border-left" sustituye a "border-left-width/style/color" con la siguiente sintaxis, "border-left: width style color;" */ 
+/* El valor "double" del atributo "border-left-style" representa dos líneas gordas, pero de menor grosor que las creadas 
+con el valor "solid" */
+.cap{
+    width: 60px;
+    height: 25px;
+}
+.cap, .sleeve{
+    display: inline-block;
+}

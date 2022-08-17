@@ -1,0 +1,18 @@
+body{
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    background-color: #1b1b32;
+    color: #f5f6f7;
+}
+/* El vh representa el porcentaje total, a lo alto, de la página "visible" que ocupara el elemento indicado 
+(sobre 100) */
+/* Al poner el atribuuto "margin" igual a 0, nos aseguramos que la parte visible de la página sea 
+la parte total de esta */
+/* El atributo "background-color" hace referencia al color de fondo, mientras que el atributo "background" se 
+refiere al color del texto presente en ese elemento */
+label{
+    display: block;
+    margin: 0.5rem 0;
+}
+/* La unidad rem toma como referencia la fuente del elemento para poder calcular la distancia */
